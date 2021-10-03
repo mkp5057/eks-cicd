@@ -12,7 +12,7 @@ echo 'export PATH=$HOME/bin:$PATH' >>~/.bashrc
 
 # Install kubectl, if absent
 if ! type kubectl >/dev/null 2>&1; then
-	curl -o "kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-07-26/bin/$(uname -s)/amd64/kubectl"
+	curl -o "kubectl https://amazon-eks.s3-us-east-1.amazonaws.com/1.10.3/2018-07-26/bin/$(uname -s)/amd64/kubectl"
 	chmod +x ./kubectl
 	cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
 	echo 'kubectl installed'
@@ -22,7 +22,7 @@ fi
 
 # aws-iam-authenticator
 if ! type aws-iam-authenticator >/dev/null 2>&1; then
-	curl -o aws-iam-authenticator "https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-07-26/bin/$(uname -s)/amd64/aws-iam-authenticator"
+	curl -o aws-iam-authenticator "https://amazon-eks.s3-us-east-1.amazonaws.com/1.10.3/2018-07-26/bin/$(uname -s)/amd64/aws-iam-authenticator"
 	chmod +x ./aws-iam-authenticator
 	cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$HOME/bin:$PATH
 	echo 'aws-iam-authenticator installed'
