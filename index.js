@@ -5,7 +5,7 @@ const config = require('config')
 console.log(config);
 
 app.get('/', (req, res) => {
-  res.send('EKS deployment V1!')
+  res.send('EKS deployment for kittu!!')
 })
 
 app.get('/status', (req, res) => {
